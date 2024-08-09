@@ -3,19 +3,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaSlack } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaSlack, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiArrowUpRight } from "react-icons/fi";
-import { LuMoveUpRight } from "react-icons/lu";
+import { GoMail } from "react-icons/go";
+import { SlCallEnd } from "react-icons/sl";
 
 export default function Home() {
-  const techs = ["JavaScript", "Python", "PHP", "Node.js", "Express.js", "React.js", "Django", "Frappe", "WebRTC", "Next.js", "Supabase", "Postgres", "React Native", "Electron.js"]
-  const techs2 = ["Python", "Django", "Frappe", "JavaScript"]
+  const techs = ["JavaScript", "Python", "PHP", "AWS", "Node.js", "Express.js", "React.js", "Django", "Frappe", "WebRTC", "Next.js", "Supabase", "Postgres", "React Native", "Electron.js"]
+  const techs2 = ["Python", "Django", "Frappe", "JavaScript", "AWS"]
   const techs3 = ["Python", "Django", "PHP", "JavaScript", "Laravel", "Postgres"]
   return (
-    <main className="flex justify-end min-h-screen relative w-full">
-      <div className="fixed top-0 left-0 pb-5 pt-24 h-screen w-1/2 flex justify-end">
-        <div className="flex flex-col gap-5 h-full w-full max-w-[35rem] pl-5">
+    <main className="flex flex-col md:flex-row justify-end min-h-screen relative w-full">
+      <div className="md:fixed md:top-0 md:left-0 pb-5 pt-10 md:pt-24 md:h-screen md:w-1/2 md:flex md:justify-end">
+        <div className="flex flex-col gap-5 h-full w-full md:max-w-[35rem] px-10 md:px-0 md:pl-10">
           <div className="flex flex-col gap-3">
             <h1 className="text-5xl font-bold text-blue-100">Egessa David Wafula</h1>
             <h2 className="text-lg text-blue-100">Fullstack Software Engineer</h2>
@@ -23,7 +24,7 @@ export default function Home() {
               I build web, mobile and desktop applications to turn ideas into pixel-perfect, engaging, and accessible digital experiences.
             </p>
           </div>
-          <div className="flex flex-col gap-3 flex-1 py-10 text-slate-400">
+          <div className="hidden md:flex flex-col gap-3 flex-1 py-10 text-slate-400">
             <Link href={'/#about'} className="flex items-center gap-8 w-32 hover:w-44 transition-all">
               <div className="w-full h-[2px] bg-slate-400"></div>
               <h1 className="text-base">About</h1>
@@ -41,7 +42,7 @@ export default function Home() {
               <h1 className="text-base">Contact</h1>
             </Link>
           </div>
-          <div className="flex justify-start items-center gap-6">
+          <div className="mt-10 md:mt-0 flex justify-start items-center gap-6">
             <Link href="https://github.com/Davy-71993">
               <FaGithub size={23} className="text-slate-400" />
             </Link>
@@ -61,9 +62,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-1/2">
-        <div className="flex flex-col h-full w-full max-w-[35rem] pr-5">
-          <section id="about" className="px-5 pt-24 min-h-[60vh]">
+      <div className="md:w-1/2">
+        <div className="flex flex-col h-full w-full md:max-w-[35rem] px-10 md:px-0 md:pr-10">
+          <section id="about" className="md:px-5 pt-24 min-h-[60vh]">
             <h1 className="text-blue-100 text-2xl">About me</h1>
             <p className="text-slate-400 py-5 text-lg">
               Result oriented full stack developer with 5+ years of experience developing, testing, deploying and 
@@ -79,7 +80,7 @@ export default function Home() {
             wife and three daugters, or running around Kireka hill for physical fitness.
             </p>
           </section>
-          <section id="experience" className="flex flex-col gap-5 pt-24 min-h-[80vh]">
+          <section id="experience" className="flex flex-col gap-5 pt-24 md:min-h-screen">
             <h1 className="text-blue-100 text-2xl px-5">My Experience</h1>
             <div 
               onMouseEnter={()=>{
@@ -157,7 +158,7 @@ export default function Home() {
               </div>
             </Link>
           </section>
-          <section id="projects" className="flex flex-col gap-5 pt-24 min-h-screen">
+          <section id="projects" className="flex flex-col gap-5 pt-24 md:min-h-screen">
             <h1 className="text-2xl text-blue-100 px-5">My Peojects</h1>
             <Link href="https://e-duuka.vercel.app/">
               <div 
@@ -243,6 +244,23 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+          </section>
+          <section id="contact" className="flex flex-col gap-5 pt-24 min-h-[90vh]">
+            <h1 className="text-2xl text-blue-100 px-5">Contact Me</h1>
+            <div className="flex flex-col justify-center items-center sm:flex-row  gap-5 p-5 bg-slate-800 transition-colors rounded-lg shadow-sm">
+              <div className="w-30">
+                <Image src="/me.JPG" alt="Me" height={1000} width={1000} className="w-36 h-36 rounded-full object-contain" />
+              </div>
+              <div className="flex flex-col gap-3 max-w-[70%] text-xl">
+                <p className="flex w-fit justify-center gap-5 text-teal-300"><GoMail /> <span>davy.kyute@gmail.com</span></p>
+                <p className="flex w-fit justify-center gap-5 text-teal-300"><SlCallEnd /> +256777921033</p>
+                <p className="flex w-fit justify-center gap-5 text-teal-300"><SlCallEnd /> +256751437412</p>
+                <p className="flex w-fit justify-center gap-5 text-teal-300"><FaWhatsapp /> +256777921033</p>
+              </div>
+            </div>
+          </section>
+          <section className="w-full text-center text-sm font-thin text-slate-100 p-10">
+            Buitifully handcrafted by Egessa David Wafula with Nextjs and Tailwindcss
           </section>
         </div>
       </div>
