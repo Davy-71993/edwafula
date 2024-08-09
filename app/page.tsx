@@ -187,7 +187,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            <Link href="https://e-duuka.vercel.app/">
+            <Link href="https://github.com/Davy-71993/dolinemeet">
               <div 
                 onMouseEnter={()=>{
                   document.getElementById("p-2")?.classList.add("text-teal-300")
@@ -211,6 +211,34 @@ export default function Home() {
                   <p className="text-slate-400">
                     A selective forwarding unit that uses WebRTC to stream live video, audio and data to multiple 
                     front-end applications.
+                  </p>
+                </div>
+              </div>
+            </Link>
+            <Link href="https://github.com/Davy-71993/dolinemeet-client">
+              <div 
+                onMouseEnter={()=>{
+                  document.getElementById("p-3")?.classList.add("text-teal-300")
+                  document.getElementById("ap-3")?.classList.remove("mt-2")
+                  document.getElementById("ap-3")?.classList.add("-mt-0", "ml-1")
+                }}
+                onMouseLeave={()=>{
+                  document.getElementById("p-3")?.classList.remove("text-teal-300")
+                  document.getElementById("ap-3")?.classList.remove("-mt-0", "ml-1")
+                  document.getElementById("ap-3")?.classList.add("mt-2")
+                }}
+                className="flex gap-5 p-5 hover:bg-slate-800 transition-colors rounded-lg shadow-sm">
+                <div className="w-[30%]">
+                  <Image src="/meet-client.jpg" alt="DolineMeet" height={1000} width={1000} className="w-full h-auto rounded-lg" />
+                </div>
+                <div className="w-[70%]">
+                  <h1 className="text-blue-100 text-lg -mt-2 flex gap-2" id="p-3">
+                    DolineMeet 
+                    <FiArrowUpRight id="ap-3" className="transition-all mt-2"/>
+                  </h1> 
+                  <p className="text-slate-400">
+                    A video/audio media streaming app built with nextjs and tailwindcss. Uses doline-sfu as the media server 
+                    in the back-end.
                   </p>
                 </div>
               </div>
