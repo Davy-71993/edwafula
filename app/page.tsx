@@ -16,9 +16,9 @@ export default function Home() {
   return (
     <main className="flex flex-col md:flex-row justify-end min-h-screen relative w-full">
       <div className="md:fixed md:top-0 md:left-0 pb-5 pt-10 md:pt-24 md:h-screen md:w-1/2 md:flex md:justify-end">
-        <div className="flex flex-col gap-5 h-full w-full md:max-w-[35rem] px-10 md:px-0 md:pl-10">
+        <div className="flex flex-col gap-5 h-full w-full md:max-w-[35rem] px-5 md:px-0 md:pl-10">
           <div className="flex flex-col gap-3">
-            <h1 className="text-5xl font-bold text-blue-100">Egessa David Wafula</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-blue-100">Egessa David Wafula</h1>
             <h2 className="text-lg text-blue-100">Fullstack Software Engineer</h2>
             <p className="text-lg text-slate-400 pr-32">
               I build web, mobile and desktop applications to turn ideas into pixel-perfect, engaging, and accessible digital experiences.
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </div>
       <div className="md:w-1/2">
-        <div className="flex flex-col h-full w-full md:max-w-[35rem] px-10 md:px-0 md:pr-10">
+        <div className="flex flex-col h-full w-full md:max-w-[35rem] px-5 md:px-0 md:pr-10">
           <section id="about" className="md:px-5 pt-24 min-h-[60vh]">
             <h1 className="text-blue-100 text-2xl">About me</h1>
             <p className="text-slate-400 py-5 text-lg">
@@ -247,15 +247,15 @@ export default function Home() {
           </section>
           <section id="contact" className="flex flex-col gap-5 pt-24 min-h-[90vh]">
             <h1 className="text-2xl text-blue-100 px-5">Contact Me</h1>
-            <div className="flex flex-col justify-center items-center sm:flex-row  gap-5 p-5 bg-slate-800 transition-colors rounded-lg shadow-sm">
-              <div className="w-30">
+            <div className="flex flex-col gap-5 p-5 sm:flex-row bg-slate-800 transition-colors rounded-lg shadow-sm">
+              <div className="w-30 mx-auto">
                 <Image src="/me.JPG" alt="Me" height={1000} width={1000} className="w-36 h-36 rounded-full object-contain" />
               </div>
-              <div className="flex flex-col gap-3 max-w-[70%] text-xl">
-                <p className="flex w-fit justify-center gap-5 text-teal-300"><GoMail /> <span>davy.kyute@gmail.com</span></p>
-                <p className="flex w-fit justify-center gap-5 text-teal-300"><SlCallEnd /> +256777921033</p>
-                <p className="flex w-fit justify-center gap-5 text-teal-300"><SlCallEnd /> +256751437412</p>
-                <p className="flex w-fit justify-center gap-5 text-teal-300"><FaWhatsapp /> +256777921033</p>
+              <div className="flex flex-col mx-auto gap-3 max-w-[70%] sm:text-xl">
+                <p className="flex w-fit gap-2 text-teal-300"><GoMail /> <span>davy.kyute@gmail.com</span></p>
+                <p className="flex w-fit gap-2 text-teal-300"><SlCallEnd /> +256777921033</p>
+                <p className="flex w-fit gap-2 text-teal-300"><SlCallEnd /> +256751437412</p>
+                <p className="flex w-fit gap-2 text-teal-300"><FaWhatsapp /> +256777921033</p>
               </div>
             </div>
           </section>
