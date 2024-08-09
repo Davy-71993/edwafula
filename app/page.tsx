@@ -1,112 +1,222 @@
+"use client"
+
+
 import Image from "next/image";
+import Link from "next/link";
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaSlack } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiArrowUpRight } from "react-icons/fi";
+import { LuMoveUpRight } from "react-icons/lu";
 
 export default function Home() {
+  const techs = ["JavaScript", "Python", "PHP", "Node.js", "Express.js", "React.js", "Django", "Frappe", "WebRTC", "Next.js", "Supabase", "Postgres", "React Native", "Electron.js"]
+  const techs2 = ["Python", "Django", "Frappe", "JavaScript"]
+  const techs3 = ["Python", "Django", "PHP", "JavaScript", "Laravel", "Postgres"]
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex justify-end min-h-screen relative w-full">
+      <div className="fixed top-0 left-0 pb-5 pt-24 h-screen w-1/2 flex justify-end">
+        <div className="flex flex-col gap-5 h-full w-full max-w-[35rem] pl-5">
+          <div className="flex flex-col gap-3">
+            <h1 className="text-5xl font-bold text-blue-100">Egessa David Wafula</h1>
+            <h2 className="text-lg text-blue-100">Fullstack Software Engineer</h2>
+            <p className="text-lg text-slate-400 pr-32">
+              I build web, mobile and desktop applications to turn ideas into pixel-perfect, engaging, and accessible digital experiences.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 flex-1 py-10 text-slate-400">
+            <Link href={'/#about'} className="flex items-center gap-8 w-32 hover:w-44 transition-all">
+              <div className="w-full h-[2px] bg-slate-400"></div>
+              <h1 className="text-base">About</h1>
+            </Link>
+            <Link href={'/#experience'} className="flex items-center gap-8 w-32 hover:w-44 transition-all">
+              <div className="w-full h-[2px] bg-slate-400"></div>
+              <h1 className="text-base">Experience</h1>
+            </Link>
+            <Link href={'/#projects'} className="flex items-center gap-8 w-32 hover:w-44 transition-all">
+              <div className="w-full h-[2px] bg-slate-400"></div>
+              <h1 className="text-base">Projects</h1>
+            </Link>
+            <Link href={'/#contact'} className="flex items-center gap-8 w-32 hover:w-44 transition-all">
+              <div className="w-full h-[2px] bg-slate-400"></div>
+              <h1 className="text-base">Contact</h1>
+            </Link>
+          </div>
+          <div className="flex justify-start items-center gap-6">
+            <Link href="https://github.com/Davy-71993">
+              <FaGithub size={23} className="text-slate-400" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/egessa-david-wafula-31728810a/">
+              <FaLinkedin size={23} className="text-slate-400" />
+            </Link>
+            <Link href="https://dolinesystems.slack.com/team/U060FJD8N2D">
+              <FaSlack size={23} className="text-slate-400"/>
+            </Link>
+            <FaDiscord size={23} className="text-slate-400"/>
+            <Link href="https://www.instagram.com/david.egessa">
+              <FaInstagram size={23} className="text-slate-400"/>
+            </Link>
+            <Link href="https://x.com/DAVIDEGESSA">
+              <FaXTwitter size={23} className="text-slate-400"/>
+            </Link>
+          </div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="w-1/2">
+        <div className="flex flex-col h-full w-full max-w-[35rem] pr-5">
+          <section id="about" className="px-5 pt-24 min-h-[60vh]">
+            <h1 className="text-blue-100 text-2xl">About me</h1>
+            <p className="text-slate-400 py-5 text-lg">
+              Result oriented full stack developer with 5+ years of experience developing, testing, deploying and 
+              maintaining entreprise grade software applications with the passion for research and exploring new 
+              technologies.
+            </p>
+            <p className="text-slate-400 pb-5 text-lg">
+              I have sufficient interpersonal skills and ability to work at minimum supervision to establish 
+              and maintain effective working relations with people regardless of their tribes, religion and race.
+            </p>
+            <p className="text-slate-400 pb-5 text-lg">
+            When {"I’m"} not at the computer, {"I’m"} usually rock climbing, reading, hanging out with my 
+            wife and three daugters, or running around Kireka hill for physical fitness.
+            </p>
+          </section>
+          <section id="experience" className="flex flex-col gap-5 pt-24 min-h-[80vh]">
+            <h1 className="text-blue-100 text-2xl px-5">My Experience</h1>
+            <div 
+              onMouseEnter={()=>{
+                document.getElementById("h-1")?.classList.add("text-teal-300")
+              }}
+              onMouseLeave={()=>{
+                document.getElementById("h-1")?.classList.remove("text-teal-300")
+              }}
+              className="flex gap-5 p-5 hover:bg-slate-800 transition-colors rounded-lg shadow-sm">
+              <p className="w-[20%] min-20 text-slate-400 h-fit self-start text-xs md:flex items-center">2024 <span className="h-[1px] w-4 bg-slate-400 mx-1"/> PRESENT</p>
+              <div className="text-slate-400 text-base w-[80%] -mt-1 cursor-pointer">
+                <h1 className="text-blue-100 text-lg" id="h-1">Fullstack Engineer, Selfemployed.</h1>
+                <p className="text-slate-400 py-3">
+                  Developing, testing, deploying and maintaining entreprise grade software applications for clients.
+                  And building personal projects.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {
+                    techs.map((tech, index)=>(
+                      <div key={index} className="px-3 py-1 rounded-xl bg-teal-400/10 text-xs text-teal-300">{ tech }</div>
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+            <Link href="https://blusonet.com">
+              <div 
+                onMouseEnter={()=>{
+                  document.getElementById("h-2")?.classList.add("text-teal-300")
+                }}
+                onMouseLeave={()=>{
+                  document.getElementById("h-2")?.classList.remove("text-teal-300")
+                }}
+                className="flex gap-5 p-5 hover:bg-slate-800 transition-colors rounded-lg shadow-sm">
+                <p className="w-[20%] min-20 text-slate-400 h-fit self-start text-xs md:flex items-center">2021 <span className="h-[1px] w-4 bg-slate-400 mx-1"/> 2023</p>
+                <div className="text-slate-400 text-base w-[80%] -mt-1 cursor-pointer">
+                  <h1 className="text-blue-100 text-lg" id="h-2">Fullstack Web Developer, Bluesonet.</h1>
+                  <p className="text-slate-400 py-3">
+                    Built ERP systems with Python, Django, Frappe and JavaScript for different businesses and companies. 
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {
+                      techs2.map((tech, index)=>(
+                        <div key={index} className="px-3 py-1 rounded-xl bg-teal-400/10 text-xs text-teal-300">{ tech }</div>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="">
+              <div 
+                onMouseEnter={()=>{
+                  document.getElementById("h-3")?.classList.add("text-teal-300")
+                }}
+                onMouseLeave={()=>{
+                  document.getElementById("h-3")?.classList.remove("text-teal-300")
+                }}
+                className="flex gap-5 p-5 hover:bg-slate-800 transition-colors rounded-lg shadow-sm">
+                <p className="w-[20%] min-20 text-slate-400 h-fit self-start text-xs md:flex items-center">2018 <span className="h-[1px] w-4 bg-slate-400 mx-1"/> 2020</p>
+                <div className="text-slate-400 text-base w-[80%] -mt-1 cursor-pointer">
+                  <h1 className="text-blue-100 text-lg" id="h-3">Software Engineer, Rehosofts Uganda.</h1>
+                  <p className="text-slate-400 py-3">
+                    Built Security systems with Python, Django, PHP Laravel and JavaScript for different businesses, 
+                    companies and house holds. 
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {
+                      techs3.map((tech, index)=>(
+                        <div key={index} className="px-3 py-1 rounded-xl bg-teal-400/10 text-xs text-teal-300">{ tech }</div>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </section>
+          <section id="projects" className="flex flex-col gap-5 pt-24 min-h-screen">
+            <h1 className="text-2xl text-blue-100 px-5">My Peojects</h1>
+            <Link href="https://e-duuka.vercel.app/">
+              <div 
+                onMouseEnter={()=>{
+                  document.getElementById("p-1")?.classList.add("text-teal-300")
+                  document.getElementById("ap-1")?.classList.remove("mt-2")
+                  document.getElementById("ap-1")?.classList.add("-mt-0", "ml-1")
+                }}
+                onMouseLeave={()=>{
+                  document.getElementById("p-1")?.classList.remove("text-teal-300")
+                  document.getElementById("ap-1")?.classList.remove("-mt-0", "ml-1")
+                  document.getElementById("ap-1")?.classList.add("mt-2")
+                }}
+                className="flex gap-5 p-5 hover:bg-slate-800 transition-colors rounded-lg shadow-sm">
+                <div className="w-[30%]">
+                  <Image src="/uduuka.png" alt="uDuuka" height={1000} width={1000} className="w-full h-auto rounded-lg" />
+                </div>
+                <div className="w-[70%]">
+                  <h1 className="text-blue-100 text-lg -mt-2 flex gap-2" id="p-1">
+                    uDuuka 
+                    <FiArrowUpRight id="ap-1" className="transition-all mt-2"/>
+                  </h1> 
+                  <p className="text-slate-400">
+                    An online market place where you can easily buy and sell anything. Featues: Map 
+                    view, Multiple pricing schemes, and Real-time Live chat
+                  </p>
+                </div>
+              </div>
+            </Link>
+            <Link href="https://e-duuka.vercel.app/">
+              <div 
+                onMouseEnter={()=>{
+                  document.getElementById("p-2")?.classList.add("text-teal-300")
+                  document.getElementById("ap-2")?.classList.remove("mt-2")
+                  document.getElementById("ap-2")?.classList.add("-mt-0", "ml-1")
+                }}
+                onMouseLeave={()=>{
+                  document.getElementById("p-2")?.classList.remove("text-teal-300")
+                  document.getElementById("ap-2")?.classList.remove("-mt-0", "ml-1")
+                  document.getElementById("ap-2")?.classList.add("mt-2")
+                }}
+                className="flex gap-5 p-5 hover:bg-slate-800 transition-colors rounded-lg shadow-sm">
+                <div className="w-[30%]">
+                  <Image src="/sfu.avif" alt="uDuuka" height={1000} width={1000} className="w-full h-auto rounded-lg" />
+                </div>
+                <div className="w-[70%]">
+                  <h1 className="text-blue-100 text-lg -mt-2 flex gap-2" id="p-2">
+                    DolineSFU 
+                    <FiArrowUpRight id="ap-2" className="transition-all mt-2"/>
+                  </h1> 
+                  <p className="text-slate-400">
+                    A selective forwarding unit that uses WebRTC to stream live video, audio and data to multiple 
+                    front-end applications.
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </section>
+        </div>
       </div>
     </main>
   );
